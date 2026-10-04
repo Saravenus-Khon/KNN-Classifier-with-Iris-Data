@@ -1,11 +1,18 @@
 """
+Author: Sara Khon
+Date: 10/03/2026
 
+In this assignment, the Iris dataset was used to classify flowers based on four measurements:
+sepal length, sepal width, petal length, and petal width.
 
-
+The program loaded the dataset, split it into training and testing data, created a KNN model
+with a chosen value of K, trained the model, and tested its accuracy. The program also accepts
+four user-entered measurements to predict the type of Iris flower and creates a scatter plot
+to visualize the different Iris species and the new flower.
 """
 
 
-
+# import your tools
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
@@ -65,11 +72,9 @@ new_flower = pd.DataFrame([[sepal_length, sepal_width, petal_length, petal_width
 prediction = model.predict(new_flower)
 print("The predicted Iris Type: ", prediction[0])
 
+
+# bonus points
 # Make a scatter plot showing iris species by petal measurements
-
-
-# Make a scatter plot showing iris species by petal measurements
-
 species_colors = {
     'Iris-setosa': 'orange',
     'Iris-versicolor': 'purple',
